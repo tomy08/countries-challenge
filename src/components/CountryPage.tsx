@@ -21,7 +21,7 @@ export default function Country() {
   return (
     <div className="gap-4">
       <Header />
-      <div className="py-16 pl-8 ">
+      <div className="sm:py-16 py-8 pl-8 ">
         <a
           href="/"
           className="px-6 py-2 bg-white dark:bg-blue-950 shadow-md rounded-sm dark:text-white"
@@ -77,17 +77,19 @@ export default function Country() {
                   : 'N/A'}
               </li>
             </ul>
-            <div className="mt-16 flex items-center">
-              <strong className="mr-4">Border Countries:</strong>
-              {'  '}
-              <div className="gap-x-4">
-                {country.borders.map((borderCode: string) => (
-                  <span className="bg-white dark:bg-blue-950 shadow-md px-4 py-1 mr-2 rounded-sm">
-                    {borderCode}
-                  </span>
-                ))}
+            {country.borders && country.borders.length > 0 && (
+              <div className="mt-16 flex flex-col sm:flex-row item-start sm:items-center">
+                <strong className="mr-4">Border Countries:</strong>
+                {'  '}
+                <div className="gap-x-4 sm:mt-0 mt-2">
+                  {country.borders.map((borderCode: string) => (
+                    <span className="bg-white dark:bg-blue-950 shadow-md px-4 py-1 mr-2 rounded-sm">
+                      {borderCode}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       ) : (
