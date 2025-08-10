@@ -32,7 +32,7 @@ export default function Main() {
 
     if (inputValue.trim() !== '') {
       filtered = filtered.filter((country) =>
-        country.name.toLowerCase().includes(inputValue.toLowerCase())
+        country.name.common.toLowerCase().includes(inputValue.toLowerCase())
       )
     }
 
@@ -53,7 +53,7 @@ export default function Main() {
 
     if (inputValue.trim() !== '') {
       filtered = filtered.filter((country) =>
-        country.name.toLowerCase().includes(inputValue.toLowerCase())
+        country.name.common.toLowerCase().includes(inputValue.toLowerCase())
       )
     }
 
@@ -96,8 +96,8 @@ export default function Main() {
           </div>
         </section>
         <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {countries.map((country) => (
-            <CountryItem key={country.alpha3Code} country={country} />
+          {countries.map((country, i) => (
+            <CountryItem key={i} country={country} />
           ))}
         </section>
       </main>
