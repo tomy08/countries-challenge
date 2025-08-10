@@ -1,10 +1,10 @@
-import type { Country } from '../types'
+import type { Country } from '@/types'
 export default function CountryItem({ country }: { country: Country }) {
   return (
     <a
       className="px-4 pb-12 m-4 shadow-lg rounded-lg min-h-64 dark:text-white"
       key={country.alpha3Code}
-      href={`/countries/${country.alpha3Code}`}
+      href={`/country/${country.alpha3Code}`}
     >
       <img
         src={country.flags.png}
