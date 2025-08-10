@@ -74,7 +74,7 @@ export default function App() {
               placeholder="Search for a country..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="p-2 border-none rounded-r text-grey-400 bg-white dark:text-white dark:bg-blue-900"
+              className="p-2 border-none rounded-r text-grey-400 bg-white dark:text-white dark:bg-blue-900 focus:outline-none"
             />
           </form>
           <div className="mr-4">
