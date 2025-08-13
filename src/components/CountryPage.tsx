@@ -71,7 +71,7 @@ export default function Country() {
               <li>
                 <strong>Currencies:</strong>{' '}
                 {country.currencies
-                  ? Object.values(country.currencies)
+                  ? (Object.values(country.currencies) as { name: string }[])
                       .map((cur) => cur.name)
                       .join(', ')
                   : 'N/A'}
