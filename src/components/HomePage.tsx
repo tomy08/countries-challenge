@@ -64,8 +64,8 @@ export default function Main() {
     <>
       <Header />
       <main className="p-8">
-        <section className="flex justify-between items-center mt-4 mb-8">
-          <form className="ml-8" onSubmit={handleSearch}>
+        <section className="flex flex-col sm:flex-row justify-between  items-center mt-4 mb-8">
+          <form className="ml-1 sm:ml-8" onSubmit={handleSearch}>
             <button className="p-2 rounded-l text-grey-400 bg-white dark:text-white dark:bg-blue-900">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
