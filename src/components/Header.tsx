@@ -12,7 +12,8 @@ export default function Header() {
         className="text-gray-700 dark:text-white hover:cursor-pointer border-none bg-transparent"
         onClick={toggleDarkMode}
       >
-        <i className="fas fa-moon"></i> Dark Mode
+        <i className="fas fa-moon"></i>
+        <span className="hidden sm:inline">Dark Mode</span>
       </button>
     </header>
   )
